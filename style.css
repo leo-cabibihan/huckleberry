@@ -1,6 +1,30 @@
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+  --text-1: 1rem;
+  --text-2: 1.25rem;
+  --text-3: 1.5rem;
+  --text-4: 2rem;
+  --color-primary: hsl(160deg, 100%, 30%);
+  --color-secondary: hsl(45deg, 100%, 50%);
+  --color-secondary-darker: hsl(45deg, 100%, 40%);
+  --color-grays-black: hsl(0deg, 0%, 0%);
+  --color-grays-very-dark: hsl(0deg, 0%, 10%);
+  --color-grays-dark: hsl(0deg, 0%, 30%);
+  --color-grays-medium: hsl(0deg, 0%, 40%);
+  --color-grays-light: hsl(0deg, 0%, 60%);
+  --color-grays-white: hsl(0deg, 0%, 100%);
+}
+
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html,
@@ -10,3 +34,61 @@ body {
 }
 
 /* Add styles here! */
+header {
+  background-color: var(--color-grays-white);
+  border-bottom: var(--space-1) solid var(--color-grays-medium);
+  padding: var(--space-5) 0;
+}
+
+.max-width-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.intro-chunk {
+  padding-inline: var(--space-3);
+  max-width: 440px;
+}
+
+main {
+  background-color: var(--color-grays-light);
+  padding-block: var(--space-7);
+}
+
+.card {
+  padding-inline: var(--space-3);
+  background-color: var(--color-grays-white);
+  border-bottom: var(--space-1) solid var(--color-grays-medium);
+  padding-top: var(--space-1);
+}
+
+.indented-heading {
+  border-bottom: var(--space-1) solid var(--color-secondary-darker);
+  margin-inline-start: calc(var(--space-4) * -1);
+  width: fit-content;
+  margin-block: 0;
+  padding-inline: var(--space-4);
+  background-color: var(--color-secondary);
+  padding-block: var(--space-2);
+}
+
+strong {
+  color: var(--color-primary);
+}
+
+.intro-chunk > .title {
+  padding-block-end: var(--space-3);
+  font-size: var(--text-4);
+}
+
+.intro-chunk > p {
+  font-size: var(--text-2);
+}
+
+.card > p {
+  font-size: var(--text-1);
+}
+
+.card > h2 {
+  font-size: var(--text-3);
+}
